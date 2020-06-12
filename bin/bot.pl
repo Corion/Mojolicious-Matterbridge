@@ -7,6 +7,7 @@ use Filter::signatures;
 use feature 'signatures';
 no warnings 'experimental::signatures';
 
+# This is basically an Infobot in 40 lines of Perl
 my %knowledge;
 
 my $bot_name = "mybot";
