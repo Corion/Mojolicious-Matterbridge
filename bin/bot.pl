@@ -39,7 +39,7 @@ sub handle_message( $msg ) {
             print sprintf "Learned topic '%s' (%s)\n", $topic, $definition;
 
         } else {
-            push @result, $msg->reply( "No, $topic $definition", username => $bot_name );
+            push @result, $msg->reply( "No, $topic $knowledge{$topic}", username => $bot_name );
         };
     } else {
             warn "Ignore";
