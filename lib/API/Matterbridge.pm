@@ -11,6 +11,8 @@ use URI;
 
 requires 'build_request', 'short_ua', 'stream_ua';
 
+our $VERSION = '0.01';
+
 =head1 SEE ALSO
 
 L<https://app.swaggerhub.com/apis-docs/matterbridge/matterbridge-api/0.1.0-oas3>

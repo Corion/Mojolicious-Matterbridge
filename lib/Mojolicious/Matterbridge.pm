@@ -14,6 +14,30 @@ use URI;
 use Mojo::UserAgent;
 use API::Matterbridge::Message;
 
+our $VERSION = '0.01';
+
+=head1 NAME
+
+Mojolicious::Matterbridge - a simplistic module to connect to chat servers via matterbridge
+
+=head1 SYNOPSIS
+
+  use Mojolicious::Matterbridge;
+
+  my $client = Mojolicious::Matterbridge->new(
+      url => 'http://localhost:4242/api/',
+  );
+  
+  $client->on('message' => sub( $c, $message ) {
+      print sprintf "<%s> %s\n", $message->username, $message->text;
+      $client->send( "Haha!" );
+  });
+  $client->connect();
+  
+  Mojo::IOLoop->start unless Mojo::IOLoop->is_running;
+
+=cut
+
 with 'API::Matterbridge';
 #use Mojo::Future;
 

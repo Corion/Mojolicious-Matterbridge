@@ -8,6 +8,8 @@ use Filter::signatures;
 use feature 'signatures';
 no warnings 'experimental::signatures';
 
+our $VERSION = '0.01';
+
 # This is just a hash-with-(currently no)-methods
 
 has [
