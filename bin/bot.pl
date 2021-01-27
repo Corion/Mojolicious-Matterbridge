@@ -40,6 +40,8 @@ sub handle_message( $msg ) {
             push @result, $msg->reply( "No, $topic $knowledge{$topic}", username => $bot_name );
         };
     } else {
+        # Missing are "forget" and "<action>" and "<reply>"
+        # See also: Bot::IRC::Infobot
         #print sprintf "Ignoring '%s'\n", $msg->text;
     };
     return @result;
