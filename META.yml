@@ -26,6 +26,7 @@ requires:
   Moo: '2'
   Moo::Role: '2'
   POSIX: '0'
+  URI: '0'
   perl: '5.016'
 resources:
   bugtracker: http://github.com/Corion/Mojolicious-Matterbridge/issues
